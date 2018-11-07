@@ -1,0 +1,53 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Open Sans";
+	margin: auto;
+	width: 900px;
+	background-color: lightgray;
+}
+
+header {
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul, li {
+	list-style: none;
+	padding: 0;
+}
+
+#addButton {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+#deleteButton {
+	color: red;
+}
+
+span, label {
+	font-weight: bold;
+	color: blue;
+}
+
+#bloc {
+	background-color: aliceblue;
+	min-height: 500px;
+	padding: 50px;
+}
+
+.item-listing {
+	border: 1px dotted grey;
+}

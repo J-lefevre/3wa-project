@@ -1,0 +1,292 @@
+/* /////////////////// GéNéRAL /////////////////// */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Open Sans";
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul, li {
+	list-style: none;
+	padding: 0;
+}
+
+h2, h3 {
+	text-align: center;
+	font-family: "Amatic SC";
+}
+
+h2 {
+	background-color: #1A1A1A;
+	margin: 5px 0;
+	color: #04C8B2;
+}
+
+.h3FirstStyle {
+	border-top: 1px solid #FAB800;
+	border-bottom: 1px solid #FAB800;
+}
+
+.h3SecondStyle {
+	border-top: 1px solid #04C8B2;
+	border-bottom: 1px solid #04C8B2;
+}
+
+.invisible {
+	display: none;
+}
+
+
+/* /////////////////// HEADER /////////////////// */
+header {
+	display: flex;
+	position: sticky;
+	top: 0;
+	z-index: 3;
+	align-items: center;
+	justify-content: flex-end;
+	height: 80px;
+	background-color: #1A1A1A;
+	color: #04C8B2;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	height: 100%;
+}
+
+nav a {
+	display: flex;
+	align-items: center;
+	padding: 0 30px;
+}
+
+nav a:hover {
+	background-color: black;
+	color: #FAB800;
+}
+
+
+
+
+/* /////////////////// MAIN /////////////////// */
+#background {
+	position: fixed;
+	z-index: 1;
+	height: 102%;
+	width: 102%;
+	background-image: url('../images/background.jpg');
+	filter: blur(4px);
+	background-size: 100% 100%;
+	top: -1%;
+	left: -1%;
+}
+
+#container {
+	position: absolute;
+	z-index: 2;
+	width: 80%;
+	left: 10%;
+	margin: auto;
+	box-shadow: 0 0 5px #1A1A1A;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	background-size: 100%;
+	min-height: 800px;
+	z-index: 2;
+}
+
+/* ==================== Sections ==================== */
+.sectionMain {
+	display: flex;
+	flex-direction: column;
+	padding: 0 10px;
+}
+
+#accueil, #diplomes, #portfolio, #competences, #experience, #contact {
+	margin: 5px 0;
+}
+
+
+/* ==================== Accueil ==================== */
+#accueil .sectionMain {
+	background-color: #1A1A1A;
+	margin: 10px;
+	padding: 0 20px;
+	text-align: center;
+}
+
+#accueil .sectionMain p {
+	color: #FAB800;
+}
+
+
+/* ==================== Compétences ==================== */
+#competences .sectionMain {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#competences .sectionMain article {
+	margin: 5px 0;
+	padding: 0 20px;
+	background-color: #1A1A1A;
+}
+
+#competences .sectionMain article:first-child {
+	width: 56%;
+	color: #FAB800;
+	border: 1px solid #FAB800;
+}
+
+#competences .sectionMain article:nth-child(2) {
+	width: 43%;
+	color: #04C8B2;
+	border: 1px solid #04C8B2;
+}
+
+#competences .sectionMain article:nth-child(3) {
+	width: 41%;
+	color: #FAB800;
+	border: 1px solid #FAB800;
+}
+
+#competences .sectionMain article:nth-child(4) {
+	width: 58%;
+	color: #04C8B2;
+	border: 1px solid #04C8B2;
+}
+
+/* ================ Diplômes / Expériences================ */
+#diplomes .sectionMain article,
+#experience .sectionMain article {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 170px;
+}
+
+#diplomes .sectionMain article h3,
+#experience .sectionMain article h3 {
+	width: 130px;
+	height: 130px;
+	text-align: center;
+	padding: 55px 0px;
+	border-radius: 100px;
+	background-color: #04C8B2;
+}
+
+#diplomes .sectionMain article ul,
+#experience .sectionMain article ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: calc((100% / 7) * 6);
+	height: 70%;
+	margin: 0 0 0 20px;
+	padding: 0 20px;
+	background-color: #1A1A1A;
+}
+
+#diplomes .sectionMain article ul li,
+#experience .sectionMain article ul li {
+	color: #04C8B2;
+}
+
+
+/* ==================== Portfolio ==================== */
+#portfolio .sectionMain {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-top: 10px;
+}
+
+#portfolio .sectionMain a {
+	width: 40%;
+}
+
+
+/* ==================== Contact ==================== */
+#contact .sectionMain {
+	display: flex;
+	flex-direction: row;
+	background-color: #1A1A1A;
+	margin: 10px 0;
+	padding: 0 20px;
+	color: #04C8B2;
+}
+
+#contact .sectionMain ul {
+	width: 33%;
+}
+
+#contact .sectionMain li {
+	width: 100%;
+}
+
+#contact .sectionMain form {
+	width: 67%;
+}
+
+#contact .sectionMain form input:first-child,
+#contact .sectionMain form input:nth-child(2) {
+	display: inline-block;
+	width: 48%;
+}
+
+#contact .sectionMain form input:first-child {
+	margin: 20px 2% 20px 0;
+}
+
+#contact .sectionMain form input:nth-child(2) {
+	margin: 20px 0 20px 2%;
+}
+
+textarea {
+	width: 100%;
+}
+
+input, textarea, button {
+	border: none;
+	outline: none;
+	padding: 5px;
+}
+
+#contact button {
+	float: right;
+	margin: 20px 0;
+	padding: 10px 20px;
+	background-color: #1A1A1A;
+	color: #FAB800;
+	border: 1px solid #04C8B2;
+}
+
+
+
+/* /////////////////// FOOTER /////////////////// */
+
+footer {
+
+}
+
+
+/* /////////////////// MEDIA QUERIES /////////////////// */
+
